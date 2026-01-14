@@ -23,6 +23,7 @@
     }
 
     body {
+      margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: var(--dark);
       color: var(--light);
@@ -48,19 +49,38 @@
     }
 
     /* ===============================
-       Hero Section
+       Hero Section (Background Image)
        =============================== */
     .masthead {
       height: 100vh;
       min-height: 600px;
-      background: linear-gradient(
-        135deg,
-        var(--dark-2),
-        var(--dark)
-      );
+
+      background:
+        linear-gradient(
+          rgba(2, 6, 23, 0.75),
+          rgba(2, 6, 23, 0.75)
+        ),
+        url("assets/hero.jpg");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
       display: flex;
       align-items: center;
       text-align: center;
+
+      /* Optional subtle zoom animation */
+      animation: heroZoom 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes heroZoom {
+      from {
+        background-size: 100%;
+      }
+      to {
+        background-size: 110%;
+      }
     }
 
     .masthead h1 {
@@ -69,8 +89,8 @@
     }
 
     .masthead p {
-      color: var(--muted);
       font-size: 1.25rem;
+      color: var(--muted);
       margin-bottom: 2rem;
     }
 
@@ -115,7 +135,7 @@
     }
 
     /* ===============================
-       Cards / Portfolio
+       Cards / Projects
        =============================== */
     .card {
       background-color: var(--dark-2);
@@ -126,7 +146,7 @@
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
     }
 
     .card-title {
@@ -136,14 +156,6 @@
 
     .card-text {
       color: var(--muted);
-    }
-
-    /* ===============================
-       Contact Section
-       =============================== */
-    #contact a {
-      margin-right: 1rem;
-      margin-bottom: 1rem;
     }
 
     /* ===============================
@@ -194,8 +206,8 @@
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
           <p class="text-muted">
-            I’m a student with interests in engineering, robotics, and software development.
-            This website showcases my projects and provides a way to get in touch.
+            I’m a student interested in engineering, robotics, and software development.
+            This website highlights my work and how to get in touch.
           </p>
         </div>
       </div>
@@ -213,7 +225,7 @@
             <div class="card-body">
               <h5 class="card-title">Project One</h5>
               <p class="card-text">Short description of the project.</p>
-              <a href="https://github.com/yourusername/project1" class="btn btn-outline-primary btn-sm">View</a>
+              <a href="#" class="btn btn-outline-primary btn-sm">View</a>
             </div>
           </div>
         </div>
@@ -224,7 +236,7 @@
             <div class="card-body">
               <h5 class="card-title">Project Two</h5>
               <p class="card-text">Short description of the project.</p>
-              <a href="https://github.com/yourusername/project2" class="btn btn-outline-primary btn-sm">View</a>
+              <a href="#" class="btn btn-outline-primary btn-sm">View</a>
             </div>
           </div>
         </div>
@@ -235,7 +247,7 @@
             <div class="card-body">
               <h5 class="card-title">Project Three</h5>
               <p class="card-text">Short description of the project.</p>
-              <a href="https://github.com/yourusername/project3" class="btn btn-outline-primary btn-sm">View</a>
+              <a href="#" class="btn btn-outline-primary btn-sm">View</a>
             </div>
           </div>
         </div>
@@ -249,11 +261,11 @@
       <h2 class="section-heading">Contact</h2>
       <p class="text-muted">Let’s connect.</p>
       <a href="mailto:youremail@example.com" class="btn btn-primary">Email</a>
-      <a href="https://www.linkedin.com/in/yourname" class="btn btn-outline-primary">LinkedIn</a>
-      <a href="https://github.com/yourusername" class="btn btn-outline-primary">GitHub</a>
+      <a href="#" class="btn btn-outline-primary">LinkedIn</a>
+      <a href="#" class="btn btn-outline-primary">GitHub</a>
 
       <!-- Optional QR code -->
-      <!-- <img src="qr-code.png" alt="QR Code" style="max-width:150px; margin-top:2rem;"> -->
+      <!-- <img src="assets/qr-code.png" alt="QR Code" style="max-width:150px; margin-top:2rem;"> -->
     </div>
   </section>
 
