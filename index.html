@@ -1,169 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Your Name | Personal Website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal website and portfolio">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name – Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
     body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.6;
+      font-family: 'Arial', sans-serif;
     }
 
-    header {
-      padding: 4rem 1rem;
+    nav.navbar {
+      background: #222;
+    }
+
+    nav.navbar .nav-link {
+      color: #fff;
+    }
+
+    .masthead {
+      height: 100vh;
+      min-height: 500px;
+      background: #343a40;
+      color: #fff;
+      display: flex;
+      align-items: center;
       text-align: center;
-      background: linear-gradient(135deg, #1e293b, #020617);
     }
 
-    header h1 {
-      font-size: 2.5rem;
+    .masthead h1 {
+      font-size: 3rem;
       margin-bottom: 0.5rem;
     }
 
-    header p {
-      font-size: 1.2rem;
-      color: #cbd5f5;
+    .section-heading {
+      margin: 2rem 0 1rem;
+      text-align: center;
     }
 
-    nav {
-      margin-top: 1.5rem;
-    }
-
-    nav a {
-      margin: 0 1rem;
-      color: #93c5fd;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      border-bottom: 2px solid #334155;
-      padding-bottom: 0.5rem;
+    .portfolio .card {
       margin-bottom: 1.5rem;
-    }
-
-    .card {
-      background: #020617;
-      border: 1px solid #1e293b;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .projects a {
-      color: #60a5fa;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .projects a:hover {
-      text-decoration: underline;
-    }
-
-    .contact-links a {
-      display: inline-block;
-      margin-right: 1rem;
-      margin-bottom: 0.75rem;
-      color: #0f172a;
-      background: #93c5fd;
-      padding: 0.6rem 1rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .contact-links a:hover {
-      background: #60a5fa;
     }
 
     footer {
+      background: #222;
+      color: #aaa;
       text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #94a3b8;
-      border-top: 1px solid #1e293b;
+      padding: 1rem 0;
     }
   </style>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#mainNav" data-offset="70">
 
-<header>
-  <h1>Your Name</h1>
-  <p>Student • Engineer • Researcher</p>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<section id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    <p>
-      I am a student interested in engineering, robotics, and software development.
-      This site highlights my projects, experience, and how to get in touch.
-    </p>
-  </div>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="card projects">
-    <p><strong>Project One</strong><br>
-      Short description of what you built.<br>
-      <a href="https://github.com/yourusername/project1">View on GitHub</a>
-    </p>
-  </div>
-
-  <div class="card projects">
-    <p><strong>Project Two</strong><br>
-      Short description of this project.<br>
-      <a href="https://github.com/yourusername/project2">View on GitHub</a>
-    </p>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="card">
-    <p>Feel free to reach out:</p>
-
-    <div class="contact-links">
-      <a href="mailto:youremail@example.com">Email</a>
-      <a href="https://www.linkedin.com/in/yourname">LinkedIn</a>
-      <a href="https://github.com/yourusername">GitHub</a>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#page-top">Your Name</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <!-- Optional QR code image -->
-    <!--
-    <img src="qr-code.png" alt="QR code to contact page" style="max-width:150px;margin-top:1rem;">
-    -->
-  </div>
-</section>
+  <!-- Hero Section -->
+  <header class="masthead text-white">
+    <div class="container">
+      <h1>Hi, I'm Your Name</h1>
+      <p class="lead">Student & Developer • Your Tagline Here</p>
+      <a href="#about" class="btn btn-primary btn-lg">Learn More</a>
+    </div>
+  </header>
 
-<footer>
-  © 2026 Your Name • Built with GitHub Pages
-</footer>
+  <!-- About Section -->
+  <section id="about" class="container py-5">
+    <h2 class="section-heading">About Me</h2>
+    <p>Hello! I’m a student interested in engineering, software, and creative tech. This site highlights my work and experience.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container py-5">
+    <h2 class="section-heading">Projects</h2>
+    <div class="row portfolio">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Project One</h5>
+            <p class="card-text">Short description of project one.</p>
+            <a href="https://github.com/yourusername/project1" class="btn btn-outline-primary">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Project Two</h5>
+            <p class="card-text">Short description of project two.</p>
+            <a href="https://github.com/yourusername/project2" class="btn btn-outline-primary">View</a>
+          </div>
+        </div>
+      </div>
+      <!-- Add more project cards here -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container py-5">
+    <h2 class="section-heading">Contact Me</h2>
+    <p>Let’s get in touch!</p>
+    <a href="mailto:youremail@example.com" class="btn btn-success">Email Me</a>
+    <a href="https://www.linkedin.com/in/yourname" class="btn btn-info">LinkedIn</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Your Name • Built with GitHub Pages</p>
+  </footer>
+
+  <!-- Bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
