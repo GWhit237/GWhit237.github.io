@@ -87,7 +87,7 @@
       text-align: center;
     }
 
-    /* Service Section */
+    /* Service cards */
     .service-card {
       background-color: var(--dark-2);
       border-radius: 12px;
@@ -102,7 +102,6 @@
       border-radius: 12px;
       padding: 2.5rem 2rem;
       text-align: center;
-      position: relative;
       height: 100%;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     }
@@ -118,22 +117,6 @@
       justify-content: center;
       font-weight: bold;
       margin: 0 auto 1rem;
-    }
-
-    /* Arrows between steps */
-    .step-arrow {
-      position: absolute;
-      top: 50%;
-      right: -35px;
-      transform: translateY(-50%);
-      font-size: 2rem;
-      color: var(--muted);
-    }
-
-    @media (max-width: 991px) {
-      .step-arrow {
-        display: none;
-      }
     }
 
     footer {
@@ -211,25 +194,23 @@
     <div class="container">
       <h2 class="section-heading">How It Works</h2>
       <div class="row mt-5">
-        <div class="col-md-4 mb-4 position-relative">
+        <div class="col-md-4 mb-4">
           <div class="step-card">
             <div class="step-number">1</div>
             <h5>Reach Out</h5>
             <p class="text-muted">
               Initiate contact and describe your goals or requirements.
             </p>
-            <div class="step-arrow">➜</div>
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 position-relative">
+        <div class="col-md-4 mb-4">
           <div class="step-card">
             <div class="step-number">2</div>
             <h5>Plan & Execute</h5>
             <p class="text-muted">
               Define a solution and move forward with implementation.
             </p>
-            <div class="step-arrow">➜</div>
           </div>
         </div>
 
