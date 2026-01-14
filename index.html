@@ -7,10 +7,7 @@
   <title>Axys3D | Custom 3D Prints</title>
 
   <!-- Bootstrap CSS -->
-  <link
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
 
   <style>
     :root {
@@ -47,10 +44,7 @@
       height: 100vh;
       min-height: 600px;
       background:
-        linear-gradient(
-          rgba(2, 6, 23, 0.7),
-          rgba(2, 6, 23, 0.7)
-        ),
+        linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.7)),
         url("assets/hero.jpg");
       background-size: cover;
       background-position: center;
@@ -78,45 +72,15 @@
 
     /* Sections */
     section {
-      padding: 5rem 0;
+      padding: 5rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     .section-heading {
       color: var(--primary);
       margin-bottom: 1.5rem;
       text-align: center;
-    }
-
-    /* Service cards */
-    .service-card {
-      background-color: var(--dark-2);
-      border-radius: 12px;
-      padding: 2rem;
-      height: 100%;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    }
-
-    /* How it works tiles */
-    .step-card {
-      background-color: var(--dark-2);
-      border-radius: 12px;
-      padding: 2.5rem 2rem;
-      text-align: center;
-      height: 100%;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    }
-
-    .step-number {
-      width: 48px;
-      height: 48px;
-      background-color: var(--primary);
-      color: #000;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      margin: 0 auto 1rem;
     }
 
     footer {
@@ -141,6 +105,7 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
           <li class="nav-item"><a class="nav-link" href="policies.html">Policies</a></li>
         </ul>
       </div>
@@ -156,72 +121,48 @@
     </div>
   </header>
 
-  <!-- About Our Services -->
+  <!-- About Our Services (text block) -->
   <section>
-    <div class="container">
-      <h2 class="section-heading">About Our Services</h2>
-      <div class="row mt-5">
-        <div class="col-md-4 mb-4">
-          <div class="service-card">
-            <h4>Consultation</h4>
-            <p class="text-muted">
-              Professional guidance tailored to your technical or analytical needs.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="service-card">
-            <h4>Development</h4>
-            <p class="text-muted">
-              Clean, efficient solutions built with reliability and performance in mind.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="service-card">
-            <h4>Support</h4>
-            <p class="text-muted">
-              Clear communication and ongoing refinement as requirements evolve.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h2 class="section-heading">About Our Services</h2>
+    <p class="text-muted mt-4">
+      At Axys3D, we provide high-quality 3D printing services for a wide range of applications. 
+      From prototyping to custom projects, we are committed to precision, reliability, and affordability. 
+      Our team works closely with clients to understand their needs and deliver prints that meet their exact specifications. 
+      Whether you need a small, detailed model or a larger, functional prototype, our services are tailored to ensure the best results for your project.
+    </p>
   </section>
 
   <!-- How It Works -->
   <section>
-    <div class="container">
-      <h2 class="section-heading">How It Works</h2>
-      <div class="row mt-5">
-        <div class="col-md-4 mb-4">
-          <div class="step-card">
-            <div class="step-number">1</div>
-            <h5>Reach Out</h5>
-            <p class="text-muted">
-              Initiate contact and describe your goals or requirements.
-            </p>
-          </div>
+    <h2 class="section-heading">How It Works</h2>
+    <div class="row mt-5">
+      <div class="col-md-4 mb-4">
+        <div class="text-center">
+          <div class="step-number" style="background-color: var(--primary); width:48px; height:48px; border-radius:50%; margin:0 auto 1rem; display:flex; align-items:center; justify-content:center; font-weight:bold;">1</div>
+          <h5>Reach Out</h5>
+          <p class="text-muted">
+            Initiate contact and describe your goals or requirements.
+          </p>
         </div>
+      </div>
 
-        <div class="col-md-4 mb-4">
-          <div class="step-card">
-            <div class="step-number">2</div>
-            <h5>Plan & Execute</h5>
-            <p class="text-muted">
-              Define a solution and move forward with implementation.
-            </p>
-          </div>
+      <div class="col-md-4 mb-4">
+        <div class="text-center">
+          <div class="step-number" style="background-color: var(--primary); width:48px; height:48px; border-radius:50%; margin:0 auto 1rem; display:flex; align-items:center; justify-content:center; font-weight:bold;">2</div>
+          <h5>Plan & Execute</h5>
+          <p class="text-muted">
+            Define a solution and move forward with implementation.
+          </p>
         </div>
+      </div>
 
-        <div class="col-md-4 mb-4">
-          <div class="step-card">
-            <div class="step-number">3</div>
-            <h5>Deliver</h5>
-            <p class="text-muted">
-              Review results, iterate if needed, and finalize delivery.
-            </p>
-          </div>
+      <div class="col-md-4 mb-4">
+        <div class="text-center">
+          <div class="step-number" style="background-color: var(--primary); width:48px; height:48px; border-radius:50%; margin:0 auto 1rem; display:flex; align-items:center; justify-content:center; font-weight:bold;">3</div>
+          <h5>Deliver</h5>
+          <p class="text-muted">
+            Review results, iterate if needed, and finalize delivery.
+          </p>
         </div>
       </div>
     </div>
