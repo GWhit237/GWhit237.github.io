@@ -46,32 +46,24 @@
     .masthead {
       height: 100vh;
       min-height: 600px;
-
       background:
         linear-gradient(
           rgba(2, 6, 23, 0.7),
           rgba(2, 6, 23, 0.7)
         ),
         url("assets/hero.jpg");
-
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-
       display: flex;
       align-items: center;
       text-align: center;
-
       animation: heroZoom 20s ease-in-out infinite alternate;
     }
 
     @keyframes heroZoom {
-      from {
-        background-size: 100%;
-      }
-      to {
-        background-size: 110%;
-      }
+      from { background-size: 100%; }
+      to { background-size: 110%; }
     }
 
     .masthead h1 {
@@ -84,6 +76,7 @@
       color: var(--muted);
     }
 
+    /* Sections */
     section {
       padding: 5rem 0;
     }
@@ -91,6 +84,56 @@
     .section-heading {
       color: var(--primary);
       margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    /* Service Section */
+    .service-card {
+      background-color: var(--dark-2);
+      border-radius: 12px;
+      padding: 2rem;
+      height: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* How it works tiles */
+    .step-card {
+      background-color: var(--dark-2);
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+      height: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      background-color: var(--primary);
+      color: #000;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin: 0 auto 1rem;
+    }
+
+    /* Arrows between steps */
+    .step-arrow {
+      position: absolute;
+      top: 50%;
+      right: -35px;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 991px) {
+      .step-arrow {
+        display: none;
+      }
     }
 
     footer {
@@ -108,26 +151,14 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">Your Name</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-      >
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="policies.html">Policies</a>
-          </li>
+          <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="policies.html">Policies</a></li>
         </ul>
       </div>
     </div>
@@ -136,31 +167,80 @@
   <!-- Hero -->
   <header class="masthead">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <h1>Your Name</h1>
-          <p class="mt-4">
-            Engineering • Software • Research
-          </p>
-          <a href="about.html" class="btn btn-primary btn-lg mt-4">
-            Learn More About Me
-          </a>
-        </div>
-      </div>
+      <h1>Your Name</h1>
+      <p class="mt-4">Engineering • Software • Research</p>
+      <a href="about.html" class="btn btn-primary btn-lg mt-4">Learn More</a>
     </div>
   </header>
 
-  <!-- Content Section -->
+  <!-- About Our Services -->
   <section>
     <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-8">
-          <h2 class="section-heading">Welcome</h2>
-          <p class="text-muted">
-            This website serves as a central place to share information about my
-            background, interests, and policies. It is built using static HTML
-            and hosted for free on GitHub Pages.
-          </p>
+      <h2 class="section-heading">About Our Services</h2>
+      <div class="row mt-5">
+        <div class="col-md-4 mb-4">
+          <div class="service-card">
+            <h4>Consultation</h4>
+            <p class="text-muted">
+              Professional guidance tailored to your technical or analytical needs.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="service-card">
+            <h4>Development</h4>
+            <p class="text-muted">
+              Clean, efficient solutions built with reliability and performance in mind.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="service-card">
+            <h4>Support</h4>
+            <p class="text-muted">
+              Clear communication and ongoing refinement as requirements evolve.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section>
+    <div class="container">
+      <h2 class="section-heading">How It Works</h2>
+      <div class="row mt-5">
+        <div class="col-md-4 mb-4 position-relative">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h5>Reach Out</h5>
+            <p class="text-muted">
+              Initiate contact and describe your goals or requirements.
+            </p>
+            <div class="step-arrow">➜</div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 position-relative">
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h5>Plan & Execute</h5>
+            <p class="text-muted">
+              Define a solution and move forward with implementation.
+            </p>
+            <div class="step-arrow">➜</div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h5>Deliver</h5>
+            <p class="text-muted">
+              Review results, iterate if needed, and finalize delivery.
+            </p>
+          </div>
         </div>
       </div>
     </div>
